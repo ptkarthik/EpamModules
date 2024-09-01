@@ -1,4 +1,4 @@
-package GiftPackage;
+package OOPS.GiftPackage;
 
 public class Chocolates implements ChocoSweetsInterface {
     private double chocolateWeight;

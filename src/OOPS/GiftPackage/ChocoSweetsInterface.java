@@ -1,4 +1,4 @@
-package GiftPackage;
+package OOPS.GiftPackage;
 
 public interface ChocoSweetsInterface {
     public double calculateWeight();
