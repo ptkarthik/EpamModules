@@ -1,4 +1,4 @@
-package GiftPackage;
+package OOPS.GiftPackage;
 
 import java.util.ArrayList;
 import java.util.List;
