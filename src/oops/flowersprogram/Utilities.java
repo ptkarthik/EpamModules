@@ -1,4 +1,4 @@
-package OOPS.flowersprogram;
+package oops.flowersprogram;
 
 import java.util.*;
 class BaseClass {

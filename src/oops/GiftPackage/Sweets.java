@@ -1,4 +1,4 @@
-package OOPS.GiftPackage;
+package oops.GiftPackage;
 
 /*As part of assessing your programming skills,
 can you design a Java program to manage a New Year's gift with various chocolates and sweets?

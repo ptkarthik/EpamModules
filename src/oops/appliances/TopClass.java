@@ -1,4 +1,4 @@
-package OOPS.appliances;
+package oops.appliances;
 
 import java.util.*;
 public abstract class TopClass {
