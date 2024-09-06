@@ -3,6 +3,9 @@ package corejava.task4.arrays;
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * to find the smallest and largest
+ */
 public class SmallestAndLargest {
     public static void main(String[] args) {
         Integer[] a = new Integer[10];

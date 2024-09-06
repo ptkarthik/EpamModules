@@ -2,6 +2,9 @@ package corejava.task2;
 
 import java.util.Scanner;
 
+/**
+ * Calculator program
+ */
 public class Calculator {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

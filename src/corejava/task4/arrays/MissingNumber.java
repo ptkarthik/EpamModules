@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * to fidn the missing number in array
+ */
 public class MissingNumber {
     public static void main(String[] args) {
         Integer countTwo = 0;
