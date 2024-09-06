@@ -2,6 +2,9 @@ package corejava.task3;
 
 import java.util.Scanner;
 
+/**
+ * Pyramid Do while loop
+ */
 public class PyramidDoWhileLoop {
     public static void main(String[] args) {
         System.out.println("Enter the number ");

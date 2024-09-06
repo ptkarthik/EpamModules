@@ -1,6 +1,9 @@
 package corejava.task1;
 
 public class ApplesProgram {
+    /**
+     * find apple total
+     */
     public static int totalApples;
 
     public static int totalApplesCalculation(int a, int b) {
