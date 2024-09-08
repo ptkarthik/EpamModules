@@ -1,40 +1,45 @@
 package corejava.task2;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Scanner;
 
 /**
  * Calculator program
  */
 public class Calculator {
+    public static Logger logger = LogManager.getLogger(Calculator.class);
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the first number: ");
+        logger.info("Enter the first number: ");
         double a = sc.nextDouble();
-        System.out.println("Enter the second number: ");
+        logger.info("Enter the second number: ");
         double b = sc.nextDouble();
-        System.out.println("Enter the Operation");
+        logger.info("Enter the Operation");
         String op = sc.next();
         switch (op) {
             case "+":
-                System.out.println(a + b);
+                logger.info(a + b);
                 break;
             case "-":
-                System.out.println(a - b);
+                logger.info(a - b);
                 break;
             case "*":
-                System.out.println(a * b);
+                logger.info(a * b);
                 break;
             case "/":
-                System.out.println(a / b);
+                logger.info(a / b);
                 break;
             case "%":
-                System.out.println("The Reminder is"+" "+a % b);
+                logger.info("The Reminder is" + " " + a % b);
                 break;
             case "$":
-                System.out.println("The percentage is"+" "+(a / b)*100);
+                logger.info("The percentage is" + " " + (a / b) * 100);
                 break;
             default:
-                System.out.println("Invalid Operation");
+                logger.info("Invalid Operation");
                 break;
         }
     }

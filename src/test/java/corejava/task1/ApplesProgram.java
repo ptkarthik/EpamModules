@@ -1,6 +1,11 @@
 package corejava.task1;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class ApplesProgram {
+
+    private static final Logger logger = LogManager.getLogger(ApplesProgram.class);
     /**
      * find apple total
      */
@@ -15,7 +20,7 @@ public class ApplesProgram {
     }
 
     public static void main(String[] args) {
-        System.out.println("The Toal Apples are " + " " + totalApplesCalculation(3, 2));
-        System.out.println("The Toal Apples are " + " " + totalApplesCalculation(3.5, 2.5));
+        logger.info("The Toal Apples are " + " " + totalApplesCalculation(3, 2));
+        logger.info("The Toal Apples are " + " " + totalApplesCalculation(3.5, 2.5));
     }
 }

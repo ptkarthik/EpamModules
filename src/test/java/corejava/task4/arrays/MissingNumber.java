@@ -1,5 +1,9 @@
 package corejava.task4.arrays;
 
+import corejava.task3.PyramidWhileLoop;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -8,6 +12,8 @@ import java.util.List;
  * to fidn the missing number in array
  */
 public class MissingNumber {
+    public static final Logger logger = LogManager.getLogger(MissingNumber.class);
+
     public static void main(String[] args) {
         Integer countTwo = 0;
 
@@ -17,10 +23,10 @@ public class MissingNumber {
             countTwo += arr[i];
         }
 
-        System.out.println("Count of Array1"+" "+countTwo);
+        logger.info("Count of Array1"+" "+countTwo);
         Integer countOne=findTheMissingNumber(99, arr);
-        System.out.println("Count of Array2"+" "+countOne);
-        System.out.println("Missing Number "+ " "+ "is"+" "+(countTwo-countOne));
+        logger.info("Count of Array2"+" "+countOne);
+        logger.info("Missing Number "+ " "+ "is"+" "+(countTwo-countOne));
 
     }
 
