@@ -30,6 +30,9 @@ public class Product {
     public String getGrade() {
         return grade;
     }
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
 
     @Override
     public String toString() {

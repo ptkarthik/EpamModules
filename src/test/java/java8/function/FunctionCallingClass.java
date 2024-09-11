@@ -7,6 +7,11 @@ import java.util.function.Function;
 public class FunctionCallingClass {
     public static void main(String[] args) {
         List<ProductClass> productClassLists = new ArrayList<>();
+        ProductClass mobile = new ProductClass("Redmi", 15999, "Electronics", "B");
+
+        ProductClass tv = new ProductClass("Mi TV", 24999, "Electronics", "B");
+        ProductClass headSet = new ProductClass("JBL HeadSets", 999, "Electronics", "B");
+
         ProductClass soap = new ProductClass("Soap", 54.23, "Detergent", "B");
         ProductClass biscuit = new ProductClass("Biscuit", 100.85, "Eatables", "A");
         ProductClass bread = new ProductClass("Bread", 34.00, "Eatables", "A");
@@ -19,7 +24,10 @@ public class FunctionCallingClass {
         productClassLists.add(soap);
         productClassLists.add(biscuit);
         productClassLists.add(bread);
+        productClassLists.add(headSet);
         productClassLists.add(shampoo);
+        productClassLists.add(mobile);
+        productClassLists.add(tv);
         productClassLists.add(coke);
         productClassLists.add(chilliPowder);
         productClassLists.add(pampers);
@@ -27,20 +35,48 @@ public class FunctionCallingClass {
 
         totalValueOfProducts(productClassLists);
         totalValueOfProductsGreaterThan1000(productClassLists);
+        totalValueOfProductsElectronics(productClassLists);
+        totalValueOfProductsElectronicsGreaterThan1000(productClassLists);
 
     }
 
     private static void totalValueOfProductsGreaterThan1000(List<ProductClass> productClassLists) {
-        Function<List<ProductClass>,Double> valueForGreaterThan1000 = products -> {
-            double total=0;
-            for(ProductClass p:products) {
-                if(p.getPrice()>1000) {
-                    total+=p.getPrice();
+        Function<List<ProductClass>, Double> valueForGreaterThan1000 = products -> {
+            double total = 0;
+            for (ProductClass p : products) {
+                if (p.getPrice() > 1000) {
+                    total += p.getPrice();
                 }
             }
             return total;
         };
         System.out.println(valueForGreaterThan1000.apply(productClassLists));
+    }
+
+    private static void totalValueOfProductsElectronics(List<ProductClass> productClassLists) {
+        Function<List<ProductClass>, Double> valueForElectronicsOnly = products -> {
+            double total = 0;
+            for (ProductClass p : products) {
+                if (p.getCategory().equalsIgnoreCase("Electronics")) {
+                    total += p.getPrice();
+                }
+            }
+            return total;
+        };
+        System.out.println(valueForElectronicsOnly.apply(productClassLists));
+    }
+
+    private static void totalValueOfProductsElectronicsGreaterThan1000(List<ProductClass> productClassLists) {
+        Function<List<ProductClass>, Double> valueForElectronicsOnly = products -> {
+            double total = 0;
+            for (ProductClass p : products) {
+                if (p.getCategory().equalsIgnoreCase("Electronics") && p.getPrice() > 1000) {
+                    total += p.getPrice();
+                }
+            }
+            return total;
+        };
+        System.out.println(valueForElectronicsOnly.apply(productClassLists));
     }
 
 

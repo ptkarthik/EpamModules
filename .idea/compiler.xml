@@ -9,8 +9,5 @@
         <module name="EpamModules" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="EpamModules" target="20" />
-    </bytecodeTargetLevel>
   </component>
 </project>
