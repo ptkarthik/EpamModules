@@ -5,7 +5,7 @@ import java.util.List;
 
 public class AccessingGifts {
     public double totalWeight;
-    public String itemName;
+//    public String itemName;
 
     public double selectGifts(List<ChocoSweetsInterface> list) {
         for (ChocoSweetsInterface chocoSweetsInterface : list) {
