@@ -1,5 +1,7 @@
 package java8;
 
+import java.util.List;
+
 public class Streams {
 	public class Product {
 	    private String name;
